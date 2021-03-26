@@ -85,7 +85,3 @@ AVG_CHARACTER_ITEMS = '''
 
 '''
 
-
-GET_CHARACTER_TABLE = '''SELECT * 
-FROM charactercreator_character'''
-
