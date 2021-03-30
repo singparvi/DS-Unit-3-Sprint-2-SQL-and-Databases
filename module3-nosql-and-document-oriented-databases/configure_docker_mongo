@@ -1,0 +1,14 @@
+Terminal commands
+
+
+docker pull mongo
+
+docker run --name some-mongo -d -p 27017:27017 mongo:latest
+
+docker network create docker_network
+
+docker run --name some-mongo -d -p 27017:27017 mongo:latest
+
+docker network connect docker_network some-mongo
+
+docker network inspect docker_network

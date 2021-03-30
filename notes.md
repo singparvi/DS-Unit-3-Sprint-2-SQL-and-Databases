@@ -141,3 +141,19 @@ create table titanic
 
 
 
+# Module 3
+
+1. MongoDB commands
+
+```
+
+db.createCollection('rpg_db')
+
+db.rpg_collection.insertOne({'name': 'alex', 'hp': '10', 'level': '5', 'wisdom': '15'})
+
+db.rpg_collection.find({'name': 'alex'}) 
+
+```
+
+
+
