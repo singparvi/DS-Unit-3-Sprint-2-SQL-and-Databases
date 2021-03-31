@@ -12,3 +12,5 @@ docker run --name some-mongo -d -p 27017:27017 mongo:latest
 docker network connect docker_network some-mongo
 
 docker network inspect docker_network
+
+docker network connect docker_network pythonssh
