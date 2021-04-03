@@ -153,7 +153,14 @@ db.rpg_collection.insertOne({'name': 'alex', 'hp': '10', 'level': '5', 'wisdom':
 
 db.rpg_collection.find({'name': 'alex'}) 
 
-```
+rpg_collections.drop({}) # drop the records in collection
+`` `
 
+
+https://stackoverflow.com/questions/952914/how-to-make-a-flat-list-out-of-a-list-of-lists
+
+https://stackoverflow.com/questions/15768757/how-to-construct-a-set-out-of-list-items-in-python
+
+https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html
 
 

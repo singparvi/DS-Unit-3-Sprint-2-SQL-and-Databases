@@ -10,10 +10,9 @@ SELECT * FROM charactercreator_character
 
 sl_curs.execute(character_select_query)
 character_results = sl_curs.fetchall()
-# get ip from docker inspect docker_network
 
 mongo_client = pymongo.MongoClient(
-    'mongodb://172.18.0.3:27017/myFirstDatabase?retryWrites=true&w=majority')
+    'mongodb://172.18.0.2:27017/myFirstDatabase?retryWrites=true&w=majority')
 
 rpg_collection = mongo_client.myFirstDatabase.rpg_collection
 rpg_collection.drop({})
