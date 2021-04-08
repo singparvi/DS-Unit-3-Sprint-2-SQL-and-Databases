@@ -1,5 +1,10 @@
 import sqlite3
 import pymongo
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+MY_PASSWORD = os.getenv('MONGO_DB_NAME')
 
 sl_conn = sqlite3.connect('rpg_db.sqlite3')
 sl_curs = sl_conn.cursor()
@@ -12,7 +17,7 @@ sl_curs.execute(character_select_query)
 character_results = sl_curs.fetchall()
 
 mongo_client = pymongo.MongoClient(
-    'mongodb+srv://singparvi:qwerty12345@cluster0.l0ldo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+    f'mongodb+srv://singparvi:{MY_PASSWORD}@cluster0.l0ldo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 
 rpg_collection = mongo_client.myFirstDatabase.rpg_collection
 rpg_collection.drop({})

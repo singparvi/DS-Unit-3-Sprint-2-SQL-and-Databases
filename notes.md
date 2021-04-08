@@ -163,4 +163,18 @@ https://stackoverflow.com/questions/15768757/how-to-construct-a-set-out-of-list-
 
 https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html
 
+```
 
+Protect keys and passwords
+
+```
+python-dotenv
+from dotenv import load_dotenv
+import os
+load_dotenv()
+MY_PASSWORD = os.getenv('MY_PASSWORD')
+
+python-decouple
+from decouple import config
+MY_PASSWORD = config('MY_PASSWORD')
+```
