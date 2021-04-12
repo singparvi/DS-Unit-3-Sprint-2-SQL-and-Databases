@@ -1,5 +1,11 @@
 import pandas as pd
 import psycopg2
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+USER = os.getenv('USER')
+PASSWORD = os.getenv('PASSWORD')
 
 df_titanic = pd.read_csv('titanic.csv')
 
@@ -12,8 +18,8 @@ df_titanic['Name'] = df_titanic['Name'].apply(lambda x: str.replace(x, "'", ""))
 
 # connect with Elephant PostGres DB and send a cursor
 pg_conn = psycopg2.connect(dbname='mlrgffyq',
-                           user='mlrgffyq',
-                           password='O6SgFeUVSIUk1q0cvOhV4IM6vsyrSRmS',
+                           user=USER,
+                           password=PASSWORD,
                            host='queenie.db.elephantsql.com')
 
 # send cursor
